@@ -1,10 +1,10 @@
 # What is this ?
 
-# Version 1.0.0
-
 To use it, first create an html file and add your file there.
 
-this module This module is a module written to fetch, add or update cookies saved in the browser.
+this module is a module written to fetch, add or update cookies saved in the browser.
+
+# Version 1.0.0
 
 It has 2 methods. the first is the take, the second is the add or update method.
 
@@ -16,6 +16,10 @@ Added a new getAll() method to the cookie object, this method returns all cookie
 
 Expires times included, on the expiration date of the replacement method by default it is 1.
 
+# Version 1.0.3
+
+Added remove method to cookie object
+
 # Installation
 
-npm install dom-cookie / npm i dom-cookie
+npm install dom-cookie or npm i dom-cookie

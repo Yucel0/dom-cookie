@@ -6,7 +6,8 @@ let allCharacter = document.cookie.split(" "),
     day = 24,
     hour = 60,
     minute = 60,
-    second = 1000;
+    second = 1000,
+    expiresDate;
 
 for (let i of allCharacter) {
     oldObj[i] = i;
@@ -58,11 +59,28 @@ export const Cookie = {
     },
     set(key = "", newValue = "", expires = 1) {
         date.setTime(date.getTime() + (expires * day * hour * minute * second));
-        let expiresDate = `expires=${date.toUTCString()}`;
+        expiresDate = `expires=${date.toUTCString()}`;
         if (key.length >= 1 && newValue.length >= 1) {
             document.cookie = `${key}=${newValue};${expiresDate}`;
         } else {
-            throw new TypeError(`'First argument' and 'Second argument' must contain at least 1 character`).message;
+            throw new TypeError(`'${key}' and '${newValue}' must contain at least 1 character`).message;
+        }
+    },
+    remove(key = ""){
+        date.setTime(date.getTime() + (0 * day * hour * minute * second));
+        expiresDate = `expires=${date.toUTCString()}`;
+        let currentValue = this.get(key);
+        if (key.length >= 1) {
+            if(currentValue != undefined){
+                document.cookie = `${key}=${currentValue};${expiresDate}`;
+                alert(`'${currentValue}' successfully removed!`)
+            }else {
+                throw new ReferenceError(`No value found with '${key}' keyword`).message;
+            }
+        } else {
+            throw new TypeError(`'${key}' must contain at least 1 character`).message;
         }
     }
 }
+
+

@@ -12,7 +12,7 @@ It has 2 methods. the first is the take, the second is the add or update method.
 
 Added a new getAll() method to the cookie object, this method returns all cookies with key/value information in the object.
 
-# Version 1.2.2
+# Version 1.1.2
 
 Expires times included, on the expiration date of the replacement method by default it is 1.
 

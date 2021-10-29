@@ -18,7 +18,11 @@ Expires times included, on the expiration date of the replacement method by defa
 
 # Version 1.0.3
 
-Added remove method to cookie object
+Added remove method to cookie object.
+
+# Version 1.0.4
+
+Added has method to cookie object and bug fixes done.
 
 # Installation
 
